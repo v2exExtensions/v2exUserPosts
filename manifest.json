@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "v2隐藏帖子发现",
+    "version": "1.0",
+    "description": "展示v2ex用户“隐藏的”“曾创建的”帖子",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "v2隐藏帖子发现",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["https://www.v2ex.com/member/*"],
+        "js": ["js/jquery.min.js", "js/app.js"]
+    }],
+    "permissions": [
+        "https://linshuirong.cn/posts"
+    ]
+}
